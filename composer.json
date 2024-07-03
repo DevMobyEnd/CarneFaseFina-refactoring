@@ -1,0 +1,18 @@
+{
+    "name": "usuario/carne-fase-fina-refactoring",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\CarneFaseFinaRefactoring\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "saber235",
+            "email": "jhonnygonsalez7@gmail.com"
+        }
+    ],
+    "require": {
+        "bacon/bacon-qr-code": "^3.0",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
