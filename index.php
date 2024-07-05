@@ -62,7 +62,6 @@ use BaconQrCode\Writer;
                             $qrCode = $writer->writeString($Documento);
 
                             $dataUri = 'data:image/png;base64,' . base64_encode($qrCode);
-
                             echo "<div class='carnet d-flex justify-content-center align-items-center' style='height: 100vh;'>
                                     <div class='card' id='$carnetId' style='width: 28rem; height: 36rem; position: relative;'>
                                         <img src='s2.jpg' class='card-img-top img-fluid' alt='Imagen' style='object-fit: cover; width: 100%; height: 100%; min-height: 100%;'>
@@ -72,13 +71,13 @@ use BaconQrCode\Writer;
                                             <p style='text-align: center;'><span>$Documento</span></p>
                                         </div>
                                         <img class='img-fluid' src='L.svg' alt='' style='position: absolute; top: -50px; left: -40px; width: 190px;'>
-                                        <div style='position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); padding: 10px; background-color:  rgba(183, 249, 206, 0.3);'>
+                                        <div style='position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); padding: 10px; background-color: rgba(183, 249, 206, 0.3);'>
                                             <img class='img-fluid' src='$dataUri' alt='' style='width: 120px; height: 120px;'>
                                         </div>
                                         <form action='enviarCarnet.php' method='post'>
                                             <input type='hidden' name='documento' value='$Documento'>
                                             <input type='hidden' name='aprendiz' value='$Aprendiz'>
-                                              <input type='hidden' name='Correo' value='$Correo'>
+                                            <input type='hidden' name='Correo' value='$Correo'>
                                             <input type='hidden' name='dataUri' value='$dataUri'>
                                             <button type='submit' class='btn btn-success' style='position: absolute; bottom: 10px; right: 10px;'>Enviar Carnet</button>
                                         </form>
